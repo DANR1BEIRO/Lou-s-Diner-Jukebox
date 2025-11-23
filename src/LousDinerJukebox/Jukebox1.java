@@ -17,5 +17,9 @@ public class Jukebox1 {
         System.out.println("Lista em ordem de inserção: " + songList);
         Collections.sort(songList);
         System.out.println("Lista ordenada naturalmente pelo sort: " + songList);
+
+        ArtistCompare artistCompare = new ArtistCompare();
+        songList.sort(artistCompare);
+        System.out.println("Comparando por artista utilizando um compare: " + songList);
     }
 }
