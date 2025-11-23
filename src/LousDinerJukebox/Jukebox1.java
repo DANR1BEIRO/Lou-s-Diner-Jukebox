@@ -13,7 +13,8 @@ public class Jukebox1 {
      * caracteres especiais > números > letras maiúsculas > letras minúsculas
      */
     public void go() {
-        List<String> songList = MockSongs.getSongStrings();
+        List<Song> songList = MockSongs.getSongsObjects();
+        System.out.println(songList);
         Collections.sort(songList);
         System.out.println(songList);
     }

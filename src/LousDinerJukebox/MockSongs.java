@@ -11,8 +11,20 @@ public class MockSongs {
      */
     public static List<String> getSongStrings() {
         List<String> songs = new ArrayList<>(
-                List.of("somersalt", "cassidy", "$10", "havana", "Cassidy", "50 ways")
+                List.of("somersault", "cassidy", "$10", "havana", "Cassidy", "50 ways")
         );
+        return songs;
+    }
+
+    public static List<Song> getSongsObjects() {
+        List<Song> songs = new ArrayList<>(List.of(
+                new Song("somersault", "zero 7", 147),
+                new Song("cassidy", "grateful dead", 158),
+                new Song("$10", "hitchhiker", 140),
+                new Song("havana", "cabello", 105),
+                new Song("Cassidy", "grateful dead", 158),
+                new Song("50 ways", "simon", 102)));
+
         return songs;
     }
 }
