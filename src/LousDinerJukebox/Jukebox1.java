@@ -14,8 +14,8 @@ public class Jukebox1 {
      */
     public void go() {
         List<Song> songList = MockSongs.getSongsObjects();
-        System.out.println(songList);
+        System.out.println("Lista em ordem de inserção: " + songList);
         Collections.sort(songList);
-        System.out.println(songList);
+        System.out.println("Lista ordenada naturalmente pelo sort: " + songList);
     }
 }
