@@ -1,4 +1,4 @@
-package LousDinerJukebox;
+package LousDinerJukebox.test;
 
 public class HashCodeAndEqualsTest01 {
     public static void main(String[] args) {
