@@ -14,7 +14,10 @@ public class testTree {
         Book b2 = new Book("Remix your Body");
         Book b3 = new Book("Finding Emo");
 
-        Set<Book> tree = new TreeSet<>((o1, o2) -> o1.getTitle().compareTo(o2.getTitle()));
+        // Construtor sobrecarregado de TreeSet que aceita Comparator
+        // Set<Book> tree = new TreeSet<>((o1, o2) -> o1.getTitle().compareTo(o2.getTitle()));
+
+        Set<Book> tree = new TreeSet<>();
         tree.add(b1);
         tree.add(b2);
         tree.add(b3);
@@ -22,7 +25,7 @@ public class testTree {
     }
 }
 
-class Book {
+class Book implements Comparable<Book> {
     private String title;
 
     public Book(String title) {
@@ -47,5 +50,10 @@ class Book {
     @Override
     public String toString() {
         return title;
+    }
+
+    @Override
+    public int compareTo(Book book) {
+        return title.compareTo(book.title);
     }
 }
