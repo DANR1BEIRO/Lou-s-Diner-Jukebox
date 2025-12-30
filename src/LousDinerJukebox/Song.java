@@ -23,13 +23,7 @@ public class Song implements Comparable {
 
     @Override
     public String toString() {
-        return "Song{" +
-                "title='" + title + '\'' +
-                ", artist='" + artist + '\'' +
-                ", genre='" + genre + '\'' +
-                ", year=" + year +
-                ", timesPlayed=" + timesPlayed +
-                '}';
+        return "\n" + title + ", " + artist + ", " + genre;
     }
 
     @Override
