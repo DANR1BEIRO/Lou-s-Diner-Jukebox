@@ -16,7 +16,7 @@ public class MockSongs {
         return songs;
     }
 
-    /*public static List<Song> getSongsObjects() {
+    public static List<Song> getSongsObjects() {
         List<Song> songs = new ArrayList<>(List.of(
                 new Song("somersault", "zero 7", 147),
                 new Song("cassidy", "grateful dead", 158),
@@ -26,5 +26,5 @@ public class MockSongs {
                 new Song("50 ways", "simon", 102)));
 
         return songs;
-    }*/
+    }
 }
