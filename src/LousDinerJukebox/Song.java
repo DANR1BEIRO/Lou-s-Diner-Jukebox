@@ -1,11 +1,11 @@
 package LousDinerJukebox;
 
-public class Song {
-    private final String title;
-    private final String artist;
-    private final String genre;
-    private final int year;
-    private final int timesPlayed;
+public class Song implements Comparable {
+    private String title;
+    private String artist;
+    private String genre;
+    private int year;
+    private int timesPlayed;
 
     public Song(String title, String artist, String genre, int year, int timesPlayed) {
         this.title = title;
@@ -15,6 +15,11 @@ public class Song {
         this.timesPlayed = timesPlayed;
     }
 
+    public Song(String title, String artist, int timesPlayed) {
+        this.title = title;
+        this.artist = artist;
+        this.timesPlayed = timesPlayed;
+    }
 
     @Override
     public String toString() {
@@ -25,6 +30,11 @@ public class Song {
                 ", year=" + year +
                 ", timesPlayed=" + timesPlayed +
                 '}';
+    }
+
+    @Override
+    public int compareTo(Object o) {
+        return 0;
     }
 
     public String getTitle() {
