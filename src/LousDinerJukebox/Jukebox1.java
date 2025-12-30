@@ -14,7 +14,7 @@ public class Jukebox1 {
      * caracteres especiais > números > letras maiúsculas > letras minúsculas
      */
     public void go() {
-        List<Song> songList = MockSongs.getSongsObjects();
+        List<Song> songList = MockMoreSongs.getSongsObjects();
         System.out.println("Lista em ordem de inserção: " + songList);
         // Usa Comparable para ordenar
         Collections.sort(songList);

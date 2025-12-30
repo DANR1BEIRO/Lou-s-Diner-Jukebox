@@ -20,9 +20,9 @@ public class Jukebox3 {
         System.out.println(songList);
 
         System.out.println("---Decrescente com int");
-        songList.sort((song1, song2) -> song2.getBpm() - song1.getBpm());
+        songList.sort((song1, song2) -> song2.getTimesPlayed() - song1.getTimesPlayed());
         System.out.println(songList.stream()
-                .map(song -> String.valueOf(song.getBpm()))
+                .map(song -> String.valueOf(song.getTimesPlayed()))
                 .collect(Collectors.joining(", ", "", ".")));
     }
 }
