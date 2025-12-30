@@ -1,25 +1,30 @@
 package LousDinerJukebox;
 
-public class Song implements Comparable<Song> {
-    private String title;
-    private String artist;
-    private int bpm;
+public class Song {
+    private final String title;
+    private final String artist;
+    private final String genre;
+    private final int year;
+    private final int timesPlayed;
 
-    public Song(String title, String artist, int bpm) {
+    public Song(String title, String artist, String genre, int year, int timesPlayed) {
         this.title = title;
         this.artist = artist;
-        this.bpm = bpm;
+        this.genre = genre;
+        this.year = year;
+        this.timesPlayed = timesPlayed;
     }
 
-    @Override
-    public int hashCode() {
-        return title.hashCode();
-    }
 
     @Override
-    public boolean equals(Object obj) {
-        Song newSong = (Song) obj;
-        return title.equals(newSong.getTitle());
+    public String toString() {
+        return "Song{" +
+                "title='" + title + '\'' +
+                ", artist='" + artist + '\'' +
+                ", genre='" + genre + '\'' +
+                ", year=" + year +
+                ", timesPlayed=" + timesPlayed +
+                '}';
     }
 
     public String getTitle() {
@@ -30,17 +35,15 @@ public class Song implements Comparable<Song> {
         return artist;
     }
 
-    public int getBpm() {
-        return bpm;
+    public String getGenre() {
+        return genre;
     }
 
-    @Override
-    public String toString() {
-        return title + ": " + artist;
+    public int getYear() {
+        return year;
     }
 
-    @Override
-    public int compareTo(Song song) {
-        return title.compareTo(song.getTitle());
+    public int getTimesPlayed() {
+        return timesPlayed;
     }
 }
